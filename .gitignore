@@ -1,0 +1,9 @@
+node_modules
+
+.env
+
+.vercel
+
+motorcycles.json
+reviews.json
+accessories.json
