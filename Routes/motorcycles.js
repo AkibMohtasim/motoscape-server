@@ -34,6 +34,13 @@ router.get('/', async (req, res) => {
   res.send({ count, motorcycles });
 })
 
+router.post('/', async (req, res) => {
+  const motorcycleBody = req.body;
+  const newMotorcycle = new Motorcycle(motorcycleBody);
+  const result = await newMotorcycle.save();
+  res.send(result);
+})
+
 
 router.get('/:id', async (req, res) => {
   const id = req.params.id;

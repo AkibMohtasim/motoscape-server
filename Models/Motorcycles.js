@@ -24,7 +24,7 @@ const motorcyclesSchema = new mongoose.Schema({
   name: String,
   img: String,
   price: Number,
-  offer: Boolean,
+  offer: { type: Boolean, default: false },
   details: detailsSchema
 },
 
