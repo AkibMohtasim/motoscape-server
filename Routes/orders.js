@@ -8,7 +8,7 @@ const Order = require('../Models/Orders');
 // ----------------- Order Section -----------------------
 
 router.get('/', async (req, res) => {
-  const orders = await Order.find().sort({ status: 1 });
+  const orders = await Order.find().sort({ status: 1, date: 1 });
   res.send(orders);
 })
 
